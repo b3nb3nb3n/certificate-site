@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Certificate Expiry Calendar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Certificate Expiry Calendar</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -11,34 +12,40 @@
 <button id="addButton" class="add-btn">Add Certificate</button>
 
 <div class="calendar-container">
-    <div class="calendar-header">
-        <button id="prevMonth">←</button>
-        <h2 id="monthYear"></h2>
-        <button id="nextMonth">→</button>
-    </div>
-
-    <div class="calendar-grid" id="calendarGrid"></div>
+  <div class="calendar-header">
+    <button id="prevMonth">←</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonth">→</button>
+  </div>
+  <div class="calendar-grid" id="calendarGrid"></div>
 </div>
+
+<!-- Download current ICS feed from the backend -->
+<p style="margin-top:16px;">
+  <a class="add-btn" href="/certificate-calendar.ics">Download Outlook Calendar File</a>
+</p>
 
 <!-- Popup Form -->
 <div id="popup" class="popup">
-    <div class="popup-content">
-        <h3>Add Certificate</h3>
+  <div class="popup-content">
+    <h3>Add Certificate</h3>
 
-        <label>User Name:</label>
-        <input type="text" id="userName" placeholder="Enter user name">
+    <label>User Name:</label>
+    <input type="text" id="userName" placeholder="Enter user name" />
 
-        <label>Certificate Name:</label>
-        <input type="text" id="certName" placeholder="Enter certificate name">
+    <label>Certificate Name:</label>
+    <input type="text" id="certName" placeholder="Enter certificate name" />
 
-        <label>Expiry Date:</label>
-        <input type="date" id="certDate">
+    <label>Expiry Date:</label>
+    <input type="date" id="certDate" />
 
-        <button id="saveCert">Save</button>
-        <button id="closePopup" class="close-btn">Cancel</button>
+    <div style="margin-top:10px;">
+      <button id="saveCert">Save</button>
+      <button id="closePopup" class="close-btn">Cancel</button>
     </div>
+  </div>
 </div>
-<button id="downloadICS">Download Outlook Calendar File</button>
+
 <script src="script.js"></script>
 </body>
 </html>
