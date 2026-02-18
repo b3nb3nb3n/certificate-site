@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.calendar-container {
+    width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.day {
+    height: 90px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+}
+
+.day.expiry {
+    background: #ffcccc;
+    border: 2px solid red;
+    color: red;
+    font-weight: bold;
+}
+
+.day-number {
+    font-weight: bold;
+}
+
+.certificate-label {
+    font-size: 12px;
+    margin-top: 5px;
+    color: red;
+}
+
+.add-btn {
+    background: #0078ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.add-btn:hover {
+    background: #005fcc;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    margin: 150px auto;
+    border-radius: 10px;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    background: #aaa;
+}
+.close-btn:hover {
+    background: #888;
+}
+
+.user-name {
+        font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 3px;
+}
+
+.cert-name {
+        font-size: 16px;
+    font-weight: 900;
+    color: #d00000;
+    margin-top: 2px;
+    text-transform: uppercase;
+
+}
